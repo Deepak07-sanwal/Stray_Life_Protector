@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ HTML ELEMENT STYLING ################# */
+html{
+    /*font-size: 10px; *by default 16px or 100%  for 10px = (100/16)*10==62.5    */
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    /* width : 100% ; */
+}
+ul li{
+    list-style: none; /*we can use disc point etc */
+}
+a{
+    font-size: 1.6rem; /*1.6 rem = 16px*/
+    text-decoration: none; /*by default none*/
+}
+p, li{
+    font-size: 1.6rem; /*em check from here but rem check for root elements*/
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em; /*gap between letter */
+}
+h1,h2,h3{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;/*by default it is 700 */
+}
+input{
+    border:1px solid #ccc;
+    padding:0.8rem 1.2rem;
+    font-size: 1.5rem;
+    text-transform: none;
+}
+/* ############################## Utility class ####################### */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto; /* for putting it into  centre */
+}
+.lg-heading{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.llg-heading{
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+.md-heading{
+    font-size: 2.2rem;
+}
+.text-red{
+    color: #e63946;
+}
+.text-light{
+    color: #f4f4f4;
+}
+.text-black{
+    color: #333;
+}
+.text-grey{
+    color: #5555;
+}
+.btn{
+    display: inline-block;
+    padding: 0.5em 1.5em; /*em is good in giving padding and margin but rem is good in giving font size*/
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+}
+.btn-primary{
+    background-color: #fff;
+    border-radius: 10em;
+}
+.btn-primary:hover{
+    background-color: #ddd;
+}
+.btn-secondary{
+    border: 2px solid #e63946;
+    border-radius: 1.5em;
+    color: #e63946;
+    background: #fff;
+}
+.btn-secondary:hover{
+    background-color: #daa29e;
+}
+.bg-dark{
+    background-color: #263238;
+}
+.bg-gen{
+    background-color: #ddd;
+}
+.bg-white{
+    background-color: #fff;
+}
+.bg-blue{
+    background-color: rgb(21, 24, 42)
+}
+.cen{
+    text-align: center;
+}
+/* ######################################### Header Styling ################################### */
+/* .head{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(img/images\ \(30\).jpeg);
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+
+} */
+.home{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 95vh;
+    animation: animate 50s ease-in-out infinite;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgb(0, 0, 0));
+    background-size: cover;
+    background-position: center;
+}
+@keyframes animate{
+    0%,100%{
+        background-image: url(img/images\ \(30\).jpeg);  
+    }
+    25%{
+        background-image: url(img/dog02.jpeg);
+    }
+    50%{
+        background-image: url(img/cow01.jpeg);
+
+    }
+    75%{
+        background-image: url(img/animal-6965440.jpg);
+    }
+}
+
+.navbar{
+    padding: 1rem;
+    /* background: linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.05)); */
+}
+.navbar a:link, 
+.navbar a:visited{
+    color: #f4f4f4;
+}
+.navbar a{
+    padding-bottom: 0.3rem;
+}
+.navbar a:hover{
+    border-bottom: 1px solid #fff;
+}
+.navbar .logo{
+    float: left;
+}
+.navbar .nav-items{
+    float: right;
+    margin-top: 1rem;
+}
+.navbar .nav-item{
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.logo{
+    width: 10%;
+
+}
+.logo-img{
+    width: 80%;
+}
+/* ////////////////////////////////////////// Header Content //////////////////////////// */
+
+.header-content{
+    font-size: 1.6rem;
+    padding: 3rem;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(180, 111, 111, 0.1)); 
+}
+.header-content h1{
+    text-transform: uppercase;
+    font-size: 250%;
+    font-weight: 1000;
+    text-shadow: 1px 1px 1px #fff,0 1px 1px #fff;
+}
+.header-content p{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
+    color:rgb(0, 238, 255);
+    text-shadow: 0 0 3px rgb(248, 8, 8),0 0 2px rgb(250, 11, 11);
+}
+.header-content .p-sec{
+    font-family: none ;
+    font-weight: 700;
+    font-style: italic;
+    color: rgb(31, 12, 97);
+    text-shadow: 1px 0 1px #fff,1px 0 1px #fff;
+}
+/* ********************************************* index file content ********************************* */
+.vi-box{
+    /* background-color: #2ecc71; */
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 5rem;
+}
+.vi-box img{
+    height: 100%;
+    width: 50%;
+}
+/* $$$$$$$ Showcase $$$$$$$$$ */
+.showcase{
+    background: #fff;
+    padding: 0 0 1rem 0 ;
+    text-align: center;
+    display: flex;
+}
+.back{
+    background: #d4dad7;
+}
+.show-h{
+    padding: 5rem 0;
+}
+.row{
+    height: 40rem; 
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 0px rgb(10, 7, 7);      /*x-axis y-axis blur sprad color*/
+}
+.row1{
+    margin: 5rem 0;
+    flex-direction: row-reverse;
+}
+.row2{
+    margin: 5rem 0 ;
+}
+.row .img-box{
+    height: 100%;
+    width: 50%;
+}
+.row .text-box{
+    width: 40%;
+    height: 70%;
+    text-align: center;
+    padding: 5rem;
+} 
+.row .img-box img{
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover; /*To maintain acpect ratio*/
+    /* flex:1 1 250px; */
+}
+.img-box1 , .img-box2{
+    width: 100%;
+    height: 100%;
+}
+/* %%%%%%%% */
+.partner{
+    padding: 2rem;
+    text-align: center;
+}
+.bo{
+    /* width: 100%; */
+    padding: 3rem;
+    display: flex;
+}
+/* .bn1,.bn2,.bn3{
+    margin: 5rem;
+    width: 33.3%;
+} */
+.bn1,.bn2,.bn3{
+    display: block;
+    width: 32%;
+    margin: 0 1.3% 0 1.3%;
+}
+/* $$$$$$$$$ */
+.feature{
+    padding: 10rem 0;
+}
+.box-wrapper{
+    box-shadow: 0px 0px 20px 0px black;
+    display: flex;
+}
+.box{
+    height: 200px;
+    width: 33.333333%;
+    padding-top: 3rem;
+    text-align: center;
+}
+.box1, .box3{
+    background-color: #263238;
+    color: #fff;
+}
+.box2{
+    background: linear-gradient(25deg,#d64c7f,#ee4758 50%);
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Adobt file @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  */
+.adopt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #d4dad7 60%, #999e9b 40.1%);
+  /* background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%); */
+}
+
+.adobt{
+    display: flex;
+    height: 100%;
+}
+.adobt-img{
+    /* width: 45%; */
+    /* height: 100vh; */
+    width: 50%;
+    animation: animated 30s ease-in-out infinite;
+    background-size: cover;
+}
+@keyframes animated{
+    0%,100%{
+        background-image: url(img/abo-01.jpeg);
+    }
+    25%{
+        background-image: url(img/abo-02.jpeg);
+    }
+    50%{
+        background-image: url(img/abo-03.jpeg);
+    }
+    75%{
+        background-image: url(img/abo-04.jpeg);
+    }
+}
+.form{
+    /* height: 100vh; */
+    color: #f4f4f4;
+    width: 50%;
+}
+.form-in{
+    padding: 3rem 0 0 0;
+}
+.fr{
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+.fr-b{
+    display: block;
+    text-align: center;
+
+}
+.fo-in{
+    width: 80%;
+    height: 2rem;
+}
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& About Page &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+.abo{
+    height: fit-content;
+}
+.form{
+    padding: 0 2rem 0 2rem;
+}
+.miss{
+    padding: 5%;
+    text-align: center;
+    /* background-color: rgb(7, 75, 7); */
+    background-color: #2ecc71;
+    color: rgb(255, 251, 251);
+    margin-bottom: 2rem;
+
+}
+.abo-img{
+    height: 40%;
+    width: 40%;
+}
+.abo-box{
+    height: 30%;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 2rem 0 2rem;
+}
+/* ##################### Inform Page  Styling ######################### */
+
+.contact-form{
+    padding: 5rem 0;
+    background: linear-gradient(90deg, #d4dad7 60%, #999e9b 40.1%);
+}
+.in-fm{
+    min-height: 100vh;
+    padding: 5rem;
+    display: flex;
+}
+.form2{
+    color: #f7f7f7;
+    text-align: center;
+    padding: 3rem;
+    /* height: 100%; */
+    width: 49%;
+    flex:1 1 250px;
+}
+.form-wrapper{
+    height: 100%;
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+}
+.form-wrapper .company-address{
+    height: 100%;
+    background: #fff;
+    width: 49%;
+    text-align: center;
+    padding: 3rem;
+    flex:1 1 250px;
+}
+.form-wrapper .company-address i {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.form-wrapper .company-address h2 {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.form-wrapper .address-group{
+    margin-bottom: 3 rem;
+}
+
+.form-wrapper .company-address img{
+    width: 80%;
+    height: 70%;
+}
+textarea{
+    width: 90%;
+    height: 100%;
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Donate form styling %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.contain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #d4dad7 60%, #999e9b 40.1%);
+  /* background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%); */
+  }
+.contain .frm{
+    padding:20px;
+    width:70rem;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  }
+  
+  .contain .frm .rw{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+  }
+  
+  .contain .frm .rw .col{
+    /* width: 48%; */
+    flex:1 1 250px;
+  }
+  
+  .contain .frm .rw .col .title{
+    font-size: 2rem;
+    color:#333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .contain .frm .rw .col .inputBox{
+    margin:15px 0;
+  }
+  
+  .contain .frm .rw .col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .inputBox input{
+    width: 90%;
+  }
+  
+  .inputBox input:focus{
+    border:1px solid #000;
+  }
+  
+  .contain .frm .rw .col .flex{
+    display: flex;
+    gap:15px;
+  }
+  .contain .frm .rw .col .flex .inputBox{
+    margin-top: 0.5rem;
+  }
+  .contain .frm .rw .col .inputBox img{
+    height: 3.4rem;
+    margin-top: 0.5rem;
+    filter: drop-shadow(0 0 1px #000);
+  }
+  
+  .contain .frm .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background: #27ae60;
+    color:#fff;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .contain .frm .submit-btn:hover{
+    background: #2ecc71;
+  }
+  /******************************************* Project File Styling *******************************  */
+  /* .pro{
+    background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%);
+  } */
+  .showcase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+    min-height: 100vh;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%);
+  }
+/* ########################################### Footer styling ##################################### */
+.footer{
+    background: #263238;
+    color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+.social-media-links i{
+    margin: 2rem;
+}
+
+/* ******************************************** Media Quries ****************************************** */
+@media (max-width:1200px){
+
+    html{
+      font-size: 55%;
+    }
+    
+  
+  }
+@media(max-width:780px){
+    .adobt-img{
+        display: none;
+    }
+    .form{
+        /* height: 100% ; */
+        width: 100%;
+        /* padding: 0.5rem 0 0.5rem 0; */
+    }
+    .contain .frm{
+        width: 100%;
+    }
+    .logo{
+        display: none;
+    }
+    
+}
+@media (max-width:500px){
+
+    html{
+      font-size: 50%;
+    }
+    .box-wrapper{
+        display: block;
+    }
+    .box{
+        width: 80%;
+        margin-bottom: 4%;
+        padding: 10%;
+    }
+    .row{
+        flex-direction: column-reverse;
+        /* width: 70%; */
+        height: 21%;
+    }
+    .row .img-box{
+        width: 100%;
+    }
+    .row .text-box{
+        width: 80%
+    }
+    .bo{
+        flex-direction: column;
+        align-items: center;
+    } 
+}
+  
